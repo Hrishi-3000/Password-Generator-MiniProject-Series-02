@@ -1,4 +1,4 @@
-# SecurePass Generator - MiniProject #2
+# Password Generator - MiniProject #2
 
 A clean, responsive password generator web application built with HTML, CSS, and JavaScript. This is the second project in my mini-project series.
 
