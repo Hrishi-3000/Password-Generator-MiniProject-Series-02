@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <i class="fas fa-lock"></i>
+                <h1>SecurePass Generator</h1>
+                <p>Create strong, random passwords</p>
+            </div>
+            
+            <div class="password-display">
+                <input type="text" id="password" readonly placeholder="Your password will appear here">
+                <button id="copy-btn" title="Copy to clipboard">
+                    <i class="far fa-copy"></i>
+                </button>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="length">Password Length: <span id="length-value">12</span></label>
+                    <input type="range" id="length" min="4" max="32" value="12" class="slider">
+                </div>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-control">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">
+                            <div class="checkbox"></div>
+                            <span>Uppercase Letters (A-Z)</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-control">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">
+                            <div class="checkbox"></div>
+                            <span>Lowercase Letters (a-z)</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-control">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">
+                            <div class="checkbox"></div>
+                            <span>Numbers (0-9)</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-control">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">
+                            <div class="checkbox"></div>
+                            <span>Symbols (!@#$%)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="generate-btn" class="generate-btn">
+                <i class="fas fa-sync-alt"></i> Generate Password
+            </button>
+            
+            <div class="strength-meter">
+                <div class="strength-labels">
+                    <span>Weak</span>
+                    <span>Medium</span>
+                    <span>Strong</span>
+                    <span>Very Strong</span>
+                </div>
+                <div class="meter">
+                    <div class="strength-bar" id="strength-bar"></div>
+                </div>
+            </div>
+
+            <div class="connect-section">
+                <p class="connect-text">Connect with Me</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hrishikesh-shahane-a0a19a258/" class="social-icon" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://hrishikesh-shahane-portfolio.vercel.app/" class="social-icon" target="_blank" aria-label="Website" rel="noopener noreferrer">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hrishikesh__2003/" class="social-icon" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/Hrishi-3000" class="social-icon" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.blogger.com/profile/06534898699057353590" class="social-icon" target="_blank" aria-label="Tech Blog" rel="noopener noreferrer">
+                        <i class="fas fa-blog"></i>
+                    </a>
+                </div>
+                <p class="signature">Crafted by Hrishikesh</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        Password copied to clipboard!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
